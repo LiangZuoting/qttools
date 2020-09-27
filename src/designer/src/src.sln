@@ -1,0 +1,63 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qt5UiTools", "E:/qttools/src/designer/src/uitools\Qt5UiTools.vcxproj", "{A10E0964-7DC4-32A4-9E11-B4B25366FDAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qt5Designer", "E:/qttools/src/designer/src/lib\Qt5Designer.vcxproj", "{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qt5DesignerComponents", "E:/qttools/src/designer/src/components/lib\Qt5DesignerComponents.vcxproj", "{0433B565-CF35-3EF4-90E1-21E4144B9AC4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B} = {4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "designer", "E:/qttools/src/designer/src/designer\designer.vcxproj", "{71DF3874-BA78-3547-8566-3031AFA9AD67}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0433B565-CF35-3EF4-90E1-21E4144B9AC4} = {0433B565-CF35-3EF4-90E1-21E4144B9AC4}
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B} = {4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qaxwidget", "E:/qttools/src/designer/src/plugins/activeqt\qaxwidget.vcxproj", "{928A3BA8-DF21-3444-BF4A-755A2CF02E1D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B} = {4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qquickwidget", "E:/qttools/src/designer/src/plugins/qquickwidget\qquickwidget.vcxproj", "{9E689713-D791-3256-9DCC-6239CBD9A411}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B} = {4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A10E0964-7DC4-32A4-9E11-B4B25366FDAB}.Debug|x64.ActiveCfg = Debug|x64
+		{A10E0964-7DC4-32A4-9E11-B4B25366FDAB}.Debug|x64.Build.0 = Debug|x64
+		{A10E0964-7DC4-32A4-9E11-B4B25366FDAB}.Release|x64.ActiveCfg = Release|x64
+		{A10E0964-7DC4-32A4-9E11-B4B25366FDAB}.Release|x64.Build.0 = Release|x64
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}.Debug|x64.ActiveCfg = Debug|x64
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}.Debug|x64.Build.0 = Debug|x64
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}.Release|x64.ActiveCfg = Release|x64
+		{4F1F4C1B-0334-384C-ABEF-C4463A3D3F1B}.Release|x64.Build.0 = Release|x64
+		{0433B565-CF35-3EF4-90E1-21E4144B9AC4}.Debug|x64.ActiveCfg = Debug|x64
+		{0433B565-CF35-3EF4-90E1-21E4144B9AC4}.Debug|x64.Build.0 = Debug|x64
+		{0433B565-CF35-3EF4-90E1-21E4144B9AC4}.Release|x64.ActiveCfg = Release|x64
+		{0433B565-CF35-3EF4-90E1-21E4144B9AC4}.Release|x64.Build.0 = Release|x64
+		{71DF3874-BA78-3547-8566-3031AFA9AD67}.Debug|x64.ActiveCfg = Debug|x64
+		{71DF3874-BA78-3547-8566-3031AFA9AD67}.Debug|x64.Build.0 = Debug|x64
+		{71DF3874-BA78-3547-8566-3031AFA9AD67}.Release|x64.ActiveCfg = Release|x64
+		{71DF3874-BA78-3547-8566-3031AFA9AD67}.Release|x64.Build.0 = Release|x64
+		{928A3BA8-DF21-3444-BF4A-755A2CF02E1D}.Debug|x64.ActiveCfg = Debug|x64
+		{928A3BA8-DF21-3444-BF4A-755A2CF02E1D}.Debug|x64.Build.0 = Debug|x64
+		{928A3BA8-DF21-3444-BF4A-755A2CF02E1D}.Release|x64.ActiveCfg = Release|x64
+		{928A3BA8-DF21-3444-BF4A-755A2CF02E1D}.Release|x64.Build.0 = Release|x64
+		{9E689713-D791-3256-9DCC-6239CBD9A411}.Debug|x64.ActiveCfg = Debug|x64
+		{9E689713-D791-3256-9DCC-6239CBD9A411}.Debug|x64.Build.0 = Debug|x64
+		{9E689713-D791-3256-9DCC-6239CBD9A411}.Release|x64.ActiveCfg = Release|x64
+		{9E689713-D791-3256-9DCC-6239CBD9A411}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

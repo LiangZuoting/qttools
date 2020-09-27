@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0433B565-CF35-3EF4-90E1-21E4144B9AC4}</ProjectGuid>
+    <RootNamespace>Qt5DesignerComponents</RootNamespace>
+    <Keyword>QtVS_v303</Keyword>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.18362.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>..\..\..\..\.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>.obj\release\</IntermediateDirectory>
+    <PrimaryOutput>Qt5DesignerComponents</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>..\..\..\..\.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>.obj\debug\</IntermediateDirectory>
+    <PrimaryOutput>Qt5DesignerComponentsd</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\..\..\.\</OutDir>
+    <IntDir>.obj\debug\</IntDir>
+    <TargetName>Qt5DesignerComponentsd</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <IncludePath>E:\qttools\src\designer\src\lib\shared;E:\qttools\src\designer\src\lib\sdk;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\..\..\.\</OutDir>
+    <IntDir>.obj\release\</IntDir>
+    <TargetName>Qt5DesignerComponents</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2019_64</QtInstall>
+    <QtModules>core;core-private;xml;gui;gui-private;widgets;widgets-private</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2019_64</QtInstall>
+    <QtModules>core;core-private;xml;gui;gui-private;designer;widgets;widgets-private;uiplugin</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..;..\.\components;..\.\sdk;..\.\extension;..\.\shared;..\propertyeditor;..\..\..\..\shared\qtpropertybrowser;..\..\..\..\shared\qtgradienteditor;..\..\..\..\shared\findwidget;..\objectinspector;..\signalsloteditor;..\formeditor;..\widgetbox;..\buddyeditor;..\taskmenu;../../../../shared/tools/shared/qtpropertybrowser;..\tabordereditor;..\..\..\..\..\include;..\..\..\..\..\include\QtDesignerComponents;..\..\..\..\..\include\QtDesignerComponents\5.15.0;..\..\..\..\..\include\QtDesignerComponents\5.15.0\QtDesignerComponents;tmp;..\..\..\..\..\include\QtDesigner\5.15.0;..\..\..\..\..\include\QtDesigner\5.15.0\QtDesigner;..\..\..\..\..\include\QtDesigner;..\..\..\..\..\include\QtUiPlugin;.moc\release;.uic;/include;C:\openssl\include;C:\Utils\my_sql\mysql-5.7.25-winx64\include;C:\Utils\postgresql\pgsql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4530;4577;4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>lib_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>.obj\release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>lib_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\Qt5DesignerComponents.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_LINKED_LIST;QT_NO_JAVA_STYLE_ITERATORS;QT_NO_LINKED_LIST;QT_STATICPLUGIN;QDESIGNER_COMPONENTS_LIBRARY;QT_NO_NARROWING_CONVERSIONS_IN_CONNECT;QT_BUILD_DESIGNERCOMPONENTS_LIB;QT_BUILDING_QT;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;QT_NO_CAST_TO_ASCII;QT_ASCII_CAST_WARNINGS;QT_MOC_COMPAT;QT_USE_QSTRINGBUILDER;QT_DEPRECATED_WARNINGS;QT_DISABLE_DEPRECATED_BEFORE=0x040800;QT_DEPRECATED_WARNINGS_SINCE=0x060000;NDEBUG;QT_NO_EXCEPTIONS;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\Qt5DesignerComponents.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>5.15</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_LINKED_LIST;QT_NO_JAVA_STYLE_ITERATORS;QT_NO_LINKED_LIST;QT_STATICPLUGIN;QDESIGNER_COMPONENTS_LIBRARY;QT_NO_NARROWING_CONVERSIONS_IN_CONNECT;QT_BUILD_DESIGNERCOMPONENTS_LIB;QT_BUILDING_QT;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;QT_NO_CAST_TO_ASCII;QT_ASCII_CAST_WARNINGS;QT_MOC_COMPAT;QT_USE_QSTRINGBUILDER;QT_DEPRECATED_WARNINGS;QT_DISABLE_DEPRECATED_BEFORE=0x040800;QT_DEPRECATED_WARNINGS_SINCE=0x060000;NDEBUG;QT_NO_EXCEPTIONS;QT_NO_DEBUG;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\..\..\bin\</Command>
+      <Message>Copy Qt5DesignerComponents.dll to ..\..\..\..\..\bin\</Message>
+    </PostBuildEvent>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./.moc/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.uic</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.rcc\$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;..;..\.\components;..\.\sdk;..\.\extension;..\.\shared;..\propertyeditor;..\..\..\..\shared\qtpropertybrowser;..\..\..\..\shared\qtgradienteditor;..\..\..\..\shared\findwidget;..\objectinspector;..\signalsloteditor;..\formeditor;..\widgetbox;..\buddyeditor;..\taskmenu;../../../../shared/tools/shared/qtpropertybrowser;..\tabordereditor;..\..\..\..\..\include;..\..\..\..\..\include\QtDesignerComponents;..\..\..\..\..\include\QtDesignerComponents\5.15.0;..\..\..\..\..\include\QtDesignerComponents\5.15.0\QtDesignerComponents;tmp;..\..\..\..\..\include\QtDesigner\5.15.0;..\..\..\..\..\include\QtDesigner\5.15.0\QtDesigner;..\..\..\..\..\include\QtDesigner;..\..\..\..\..\include\QtUiPlugin;.moc\debug;.uic;/include;C:\openssl\include;C:\Utils\my_sql\mysql-5.7.25-winx64\include;C:\Utils\postgresql\pgsql\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4530;4577;4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>lib_pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>.obj\debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>lib_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\Qt5DesignerComponentsd.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_LINKED_LIST;QT_NO_JAVA_STYLE_ITERATORS;QT_NO_LINKED_LIST;QT_STATICPLUGIN;QDESIGNER_COMPONENTS_LIBRARY;QT_NO_NARROWING_CONVERSIONS_IN_CONNECT;QT_BUILD_DESIGNERCOMPONENTS_LIB;QT_BUILDING_QT;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;QT_NO_CAST_TO_ASCII;QT_ASCII_CAST_WARNINGS;QT_MOC_COMPAT;QT_USE_QSTRINGBUILDER;QT_DEPRECATED_WARNINGS;QT_DISABLE_DEPRECATED_BEFORE=0x040800;QT_DEPRECATED_WARNINGS_SINCE=0x060000;QT_NO_EXCEPTIONS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>E:\qttools\src\Qt5Designerd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;E:\qttools\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\Qt5DesignerComponentsd.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>5.15</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_NO_LINKED_LIST;QT_NO_JAVA_STYLE_ITERATORS;QT_NO_LINKED_LIST;QT_STATICPLUGIN;QDESIGNER_COMPONENTS_LIBRARY;QT_NO_NARROWING_CONVERSIONS_IN_CONNECT;QT_BUILD_DESIGNERCOMPONENTS_LIB;QT_BUILDING_QT;_CRT_SECURE_NO_WARNINGS;_USE_MATH_DEFINES;QT_NO_CAST_TO_ASCII;QT_ASCII_CAST_WARNINGS;QT_MOC_COMPAT;QT_USE_QSTRINGBUILDER;QT_DEPRECATED_WARNINGS;QT_DISABLE_DEPRECATED_BEFORE=0x040800;QT_DEPRECATED_WARNINGS_SINCE=0x060000;QT_NO_EXCEPTIONS;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;QT_XML_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" ..\..\..\..\..\bin\</Command>
+      <Message>Copy Qt5DesignerComponentsd.dll to ..\..\..\..\..\bin\</Message>
+    </PostBuildEvent>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>.rcc\$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./.moc/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>.uic</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\shared\findwidget\abstractfindwidget.cpp" />
+    <ClCompile Include="..\propertyeditor\brushpropertymanager.cpp" />
+    <ClCompile Include="..\buddyeditor\buddyeditor.cpp" />
+    <ClCompile Include="..\buddyeditor\buddyeditor_plugin.cpp" />
+    <ClCompile Include="..\buddyeditor\buddyeditor_tool.cpp" />
+    <ClCompile Include="..\taskmenu\button_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\combobox_taskmenu.cpp" />
+    <ClCompile Include="..\signalsloteditor\connectdialog.cpp" />
+    <ClCompile Include="..\taskmenu\containerwidget_taskmenu.cpp" />
+    <ClCompile Include="..\formeditor\default_actionprovider.cpp" />
+    <ClCompile Include="..\formeditor\default_container.cpp" />
+    <ClCompile Include="..\formeditor\default_layoutdecoration.cpp" />
+    <ClCompile Include="..\formeditor\deviceprofiledialog.cpp" />
+    <ClCompile Include="..\formeditor\dpi_chooser.cpp" />
+    <ClCompile Include="..\formeditor\embeddedoptionspage.cpp" />
+    <ClCompile Include="..\propertyeditor\fontpropertymanager.cpp" />
+    <ClCompile Include="..\formeditor\formeditor.cpp" />
+    <ClCompile Include="..\formeditor\formeditor_optionspage.cpp" />
+    <ClCompile Include="..\formeditor\formwindow.cpp" />
+    <ClCompile Include="..\formeditor\formwindow_dnditem.cpp" />
+    <ClCompile Include="..\formeditor\formwindow_widgetstack.cpp" />
+    <ClCompile Include="..\formeditor\formwindowcursor.cpp" />
+    <ClCompile Include="..\formeditor\formwindowmanager.cpp" />
+    <ClCompile Include="..\formeditor\formwindowsettings.cpp" />
+    <ClCompile Include="..\taskmenu\groupbox_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\inplace_editor.cpp" />
+    <ClCompile Include="..\taskmenu\inplace_widget_helper.cpp" />
+    <ClCompile Include="..\taskmenu\itemlisteditor.cpp" />
+    <ClCompile Include="..\formeditor\itemview_propertysheet.cpp" />
+    <ClCompile Include="..\..\..\..\shared\findwidget\itemviewfindwidget.cpp" />
+    <ClCompile Include="..\taskmenu\label_taskmenu.cpp" />
+    <ClCompile Include="..\formeditor\layout_propertysheet.cpp" />
+    <ClCompile Include="..\taskmenu\layouttaskmenu.cpp" />
+    <ClCompile Include="..\formeditor\line_propertysheet.cpp" />
+    <ClCompile Include="..\taskmenu\lineedit_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\listwidget_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\listwidgeteditor.cpp" />
+    <ClCompile Include="..\taskmenu\menutaskmenu.cpp" />
+    <ClCompile Include="..\propertyeditor\newdynamicpropertydialog.cpp" />
+    <ClCompile Include="..\objectinspector\objectinspector.cpp" />
+    <ClCompile Include="..\objectinspector\objectinspectormodel.cpp" />
+    <ClCompile Include="..\propertyeditor\paletteeditor.cpp" />
+    <ClCompile Include="..\propertyeditor\paletteeditorbutton.cpp" />
+    <ClCompile Include="..\formeditor\previewactiongroup.cpp" />
+    <ClCompile Include="..\propertyeditor\previewframe.cpp" />
+    <ClCompile Include="..\propertyeditor\previewwidget.cpp" />
+    <ClCompile Include="..\propertyeditor\propertyeditor.cpp" />
+    <ClCompile Include="qdesigner_components.cpp" />
+    <ClCompile Include="..\formeditor\qdesigner_resource.cpp" />
+    <ClCompile Include="..\formeditor\qlayoutwidget_propertysheet.cpp" />
+    <ClCompile Include="..\propertyeditor\qlonglongvalidator.cpp" />
+    <ClCompile Include="..\formeditor\qmainwindow_container.cpp" />
+    <ClCompile Include="..\formeditor\qmdiarea_container.cpp" />
+    <ClCompile Include="..\..\..\..\shared\qtpropertybrowser\qtbuttonpropertybrowser.cpp" />
+    <ClCompile Include="..\..\..\..\shared\qtgradienteditor\qtcolorbutton.cpp" />
+    <ClCompile Include="..\..\..\..\shared\qtpropertybrowser\qtgroupboxpropertybrowser.cpp" />
+    <ClCompile Include="..\..\..\..\shared\qtpropertybrowser\qtpropertybrowser.cpp" />
+    <ClCompile Include="..\..\..\..\shared\qtpropertybrowser\qtpropertybrowserutils.cpp" />
+    <ClCompile Include="..\..\..\..\shared\qtpropertybrowser\qtvariantproperty.cpp" />
+    <ClCompile Include="..\formeditor\qwizard_container.cpp" />
+    <ClCompile Include="..\signalsloteditor\signalslot_utils.cpp" />
+    <ClCompile Include="..\signalsloteditor\signalsloteditor.cpp" />
+    <ClCompile Include="..\signalsloteditor\signalsloteditor_plugin.cpp" />
+    <ClCompile Include="..\signalsloteditor\signalsloteditor_tool.cpp" />
+    <ClCompile Include="..\formeditor\spacer_propertysheet.cpp" />
+    <ClCompile Include="..\propertyeditor\stringlisteditor.cpp" />
+    <ClCompile Include="..\propertyeditor\stringlisteditorbutton.cpp" />
+    <ClCompile Include="..\taskmenu\tablewidget_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\tablewidgeteditor.cpp" />
+    <ClCompile Include="..\tabordereditor\tabordereditor.cpp" />
+    <ClCompile Include="..\tabordereditor\tabordereditor_plugin.cpp" />
+    <ClCompile Include="..\tabordereditor\tabordereditor_tool.cpp" />
+    <ClCompile Include="..\taskmenu\taskmenu_component.cpp" />
+    <ClCompile Include="..\formeditor\templateoptionspage.cpp" />
+    <ClCompile Include="..\taskmenu\textedit_taskmenu.cpp" />
+    <ClCompile Include="..\..\..\..\shared\findwidget\texteditfindwidget.cpp" />
+    <ClCompile Include="..\formeditor\tool_widgeteditor.cpp" />
+    <ClCompile Include="..\taskmenu\toolbar_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\treewidget_taskmenu.cpp" />
+    <ClCompile Include="..\taskmenu\treewidgeteditor.cpp" />
+    <ClCompile Include="..\widgetbox\widgetbox.cpp" />
+    <ClCompile Include="..\widgetbox\widgetbox_dnditem.cpp" />
+    <ClCompile Include="..\widgetbox\widgetboxcategorylistview.cpp" />
+    <ClCompile Include="..\widgetbox\widgetboxtreewidget.cpp" />
+    <ClCompile Include="..\formeditor\widgetselection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\..\..\..\shared\findwidget\abstractfindwidget.h">
+    </QtMoc>
+    <ClInclude Include="..\propertyeditor\brushpropertymanager.h" />
+    <QtMoc Include="..\buddyeditor\buddyeditor.h">
+    </QtMoc>
+    <ClInclude Include="..\buddyeditor\buddyeditor_global.h" />
+    <QtMoc Include="..\buddyeditor\buddyeditor_plugin.h">
+    </QtMoc>
+    <QtMoc Include="..\buddyeditor\buddyeditor_tool.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\button_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\combobox_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\signalsloteditor\connectdialog_p.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\containerwidget_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\default_actionprovider.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\default_container.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\default_layoutdecoration.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\designerpropertymanager.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\deviceprofiledialog.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\dpi_chooser.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\embeddedoptionspage.h">
+    </QtMoc>
+    <ClInclude Include="..\propertyeditor\fontpropertymanager.h" />
+    <QtMoc Include="..\formeditor\formeditor.h">
+    </QtMoc>
+    <ClInclude Include="..\formeditor\formeditor_global.h" />
+    <ClInclude Include="..\formeditor\formeditor_optionspage.h" />
+    <QtMoc Include="..\formeditor\formwindow.h">
+    </QtMoc>
+    <ClInclude Include="..\formeditor\formwindow_dnditem.h" />
+    <QtMoc Include="..\formeditor\formwindow_widgetstack.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\formwindowcursor.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\formwindowmanager.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\formwindowsettings.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\groupbox_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\inplace_editor.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\inplace_widget_helper.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\itemlisteditor.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\itemview_propertysheet.h">
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\findwidget\itemviewfindwidget.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\label_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\layout_propertysheet.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\layouttaskmenu.h">
+    </QtMoc>
+    <CustomBuild Include="lib_pch.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">echo /*-------------------------------------------------------------------- &gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "lib_pch.h"&gt;&gt;lib_pch.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating precompiled header source file 'lib_pch.h.cpp' ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lib_pch.h.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo /*-------------------------------------------------------------------- &gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;lib_pch.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "lib_pch.h"&gt;&gt;lib_pch.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating precompiled header source file 'lib_pch.h.cpp' ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lib_pch.h.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <QtMoc Include="..\formeditor\line_propertysheet.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\lineedit_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\listwidget_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\listwidgeteditor.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\menutaskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\newdynamicpropertydialog.h">
+    </QtMoc>
+    <QtMoc Include="..\objectinspector\objectinspector.h">
+    </QtMoc>
+    <ClInclude Include="..\objectinspector\objectinspector_global.h" />
+    <ClInclude Include="..\objectinspector\objectinspectormodel_p.h" />
+    <QtMoc Include="..\propertyeditor\paletteeditor.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\paletteeditorbutton.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\previewactiongroup.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\previewframe.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\previewwidget.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\propertyeditor.h">
+    </QtMoc>
+    <ClInclude Include="..\propertyeditor\propertyeditor_global.h" />
+    <ClInclude Include="..\formeditor\qdesigner_resource.h" />
+    <QtMoc Include="..\formeditor\qlayoutwidget_propertysheet.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\qlonglongvalidator.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\qmainwindow_container.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\qmdiarea_container.h">
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtbuttonpropertybrowser.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtgradienteditor\qtcolorbutton.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qteditorfactory.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtgroupboxpropertybrowser.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtpropertybrowser.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtpropertybrowserutils_p.h">
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtpropertymanager.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qttreepropertybrowser.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtvariantproperty.h">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DynamicSource>
+    </QtMoc>
+    <QtMoc Include="..\formeditor\qwizard_container.h">
+    </QtMoc>
+    <ClInclude Include="..\signalsloteditor\signalslot_utils_p.h" />
+    <QtMoc Include="..\signalsloteditor\signalsloteditor.h">
+    </QtMoc>
+    <ClInclude Include="..\signalsloteditor\signalsloteditor_global.h" />
+    <QtMoc Include="..\signalsloteditor\signalsloteditor_p.h">
+    </QtMoc>
+    <QtMoc Include="..\signalsloteditor\signalsloteditor_plugin.h">
+    </QtMoc>
+    <QtMoc Include="..\signalsloteditor\signalsloteditor_tool.h">
+    </QtMoc>
+    <QtMoc Include="..\signalsloteditor\signalsloteditorwindow.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\spacer_propertysheet.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\stringlisteditor.h">
+    </QtMoc>
+    <QtMoc Include="..\propertyeditor\stringlisteditorbutton.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\tablewidget_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\tablewidgeteditor.h">
+    </QtMoc>
+    <QtMoc Include="..\tabordereditor\tabordereditor.h">
+    </QtMoc>
+    <ClInclude Include="..\tabordereditor\tabordereditor_global.h" />
+    <QtMoc Include="..\tabordereditor\tabordereditor_plugin.h">
+    </QtMoc>
+    <QtMoc Include="..\tabordereditor\tabordereditor_tool.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\taskmenu_component.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\templateoptionspage.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\textedit_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\findwidget\texteditfindwidget.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\tool_widgeteditor.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\toolbar_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\treewidget_taskmenu.h">
+    </QtMoc>
+    <QtMoc Include="..\taskmenu\treewidgeteditor.h">
+    </QtMoc>
+    <QtMoc Include="..\widgetbox\widgetbox.h">
+    </QtMoc>
+    <ClInclude Include="..\widgetbox\widgetbox_dnditem.h" />
+    <ClInclude Include="..\widgetbox\widgetbox_global.h" />
+    <QtMoc Include="..\widgetbox\widgetboxcategorylistview.h">
+    </QtMoc>
+    <QtMoc Include="..\widgetbox\widgetboxtreewidget.h">
+    </QtMoc>
+    <QtMoc Include="..\formeditor\widgetselection.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\propertyeditor\designerpropertymanager.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>%(Filename).moc</QtMocFileName>
+    </QtMoc>
+    <ClCompile Include="lib_pch.h.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lib_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lib_pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <CustomBuild Include=".moc\debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -std:c++17 -utf-8 /wd4530 /wd4577 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;.moc\debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.moc\debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include=".moc\release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -Zi -MD -std:c++17 -utf-8 /wd4530 /wd4577 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;.moc\release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.moc\release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qteditorfactory.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>%(Filename).moc</QtMocFileName>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qtpropertymanager.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>%(Filename).moc</QtMocFileName>
+    </QtMoc>
+    <QtMoc Include="..\..\..\..\shared\qtpropertybrowser\qttreepropertybrowser.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>%(Filename).moc</QtMocFileName>
+    </QtMoc>
+    <QtMoc Include="..\signalsloteditor\signalsloteditorwindow.cpp">
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Release|x64'">input</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">input</DynamicSource>
+      <QtMocDir>.moc\$(Configuration)</QtMocDir>
+      <QtMocFileName>%(Filename).moc</QtMocFileName>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="..\signalsloteditor\connectdialog.ui">
+    </QtUic>
+    <QtUic Include="..\formeditor\deviceprofiledialog.ui">
+    </QtUic>
+    <QtUic Include="..\formeditor\formwindowsettings.ui">
+    </QtUic>
+    <QtUic Include="..\taskmenu\itemlisteditor.ui">
+    </QtUic>
+    <QtUic Include="..\propertyeditor\newdynamicpropertydialog.ui">
+    </QtUic>
+    <QtUic Include="..\propertyeditor\paletteeditor.ui">
+    </QtUic>
+    <QtUic Include="..\propertyeditor\previewwidget.ui">
+    </QtUic>
+    <QtUic Include="..\propertyeditor\stringlisteditor.ui">
+    </QtUic>
+    <QtUic Include="..\taskmenu\tablewidgeteditor.ui">
+    </QtUic>
+    <QtUic Include="..\formeditor\templateoptionspage.ui">
+    </QtUic>
+    <QtUic Include="..\taskmenu\treewidgeteditor.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\formeditor\images\mac\adjustsize.png" />
+    <None Include="..\formeditor\images\win\adjustsize.png" />
+    <None Include="..\formeditor\images\cursors\arrow.png" />
+    <None Include="..\formeditor\images\mac\back.png" />
+    <None Include="..\formeditor\images\win\back.png" />
+    <None Include="..\formeditor\images\mac\buddytool.png" />
+    <None Include="..\formeditor\images\win\buddytool.png" />
+    <None Include="..\formeditor\images\cursors\busy.png" />
+    <None Include="..\formeditor\images\widgets\calendarwidget.png" />
+    <None Include="..\formeditor\images\widgets\checkbox.png" />
+    <None Include="..\formeditor\images\cleartext.png" />
+    <None Include="..\formeditor\images\cursors\closedhand.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\mac\closetab.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\win\closetab.png" />
+    <None Include="..\formeditor\images\color.png" />
+    <None Include="..\formeditor\images\widgets\columnview.png" />
+    <None Include="..\formeditor\images\widgets\combobox.png" />
+    <None Include="..\formeditor\images\widgets\commandlinkbutton.png" />
+    <None Include="..\formeditor\images\configure.png" />
+    <None Include="..\formeditor\images\cursors\cross.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-arrow.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-busy.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-closedhand.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-cross.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-forbidden.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-hand.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-hsplit.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-ibeam.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-openhand.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-sizeall.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-sizeb.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-sizef.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-sizeh.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-sizev.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-uparrow.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-vsplit.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-wait.png" />
+    <None Include="..\..\..\..\shared\qtpropertybrowser\images\cursor-whatsthis.png" />
+    <None Include="..\formeditor\images\widgets\dateedit.png" />
+    <None Include="..\formeditor\images\widgets\datetimeedit.png" />
+    <None Include="..\formeditor\defaultbrushes.xml" />
+    <None Include="..\formeditor\images\widgets\dial.png" />
+    <None Include="..\formeditor\images\widgets\dialogbuttonbox.png" />
+    <None Include="..\formeditor\images\widgets\dockwidget.png" />
+    <None Include="..\formeditor\images\widgets\doublespinbox.png" />
+    <None Include="..\formeditor\images\mac\down.png" />
+    <None Include="..\formeditor\images\win\down.png" />
+    <None Include="..\formeditor\images\downplus.png" />
+    <None Include="..\formeditor\images\dropdownbutton.png" />
+    <None Include="..\formeditor\images\edit.png" />
+    <None Include="..\formeditor\images\mac\editbreaklayout.png" />
+    <None Include="..\formeditor\images\win\editbreaklayout.png" />
+    <None Include="..\formeditor\images\mac\editcopy.png" />
+    <None Include="..\formeditor\images\win\editcopy.png" />
+    <None Include="..\formeditor\images\mac\editcut.png" />
+    <None Include="..\formeditor\images\win\editcut.png" />
+    <None Include="..\formeditor\images\editdelete-16.png" />
+    <None Include="..\formeditor\images\mac\editdelete.png" />
+    <None Include="..\formeditor\images\win\editdelete.png" />
+    <None Include="..\formeditor\images\mac\editform.png" />
+    <None Include="..\formeditor\images\win\editform.png" />
+    <None Include="..\formeditor\images\mac\editgrid.png" />
+    <None Include="..\formeditor\images\win\editgrid.png" />
+    <None Include="..\formeditor\images\mac\edithlayout.png" />
+    <None Include="..\formeditor\images\win\edithlayout.png" />
+    <None Include="..\formeditor\images\mac\edithlayoutsplit.png" />
+    <None Include="..\formeditor\images\win\edithlayoutsplit.png" />
+    <None Include="..\formeditor\images\mac\editlower.png" />
+    <None Include="..\formeditor\images\win\editlower.png" />
+    <None Include="..\formeditor\images\mac\editpaste.png" />
+    <None Include="..\formeditor\images\win\editpaste.png" />
+    <None Include="..\formeditor\images\mac\editraise.png" />
+    <None Include="..\formeditor\images\win\editraise.png" />
+    <None Include="..\formeditor\images\mac\editvlayout.png" />
+    <None Include="..\formeditor\images\win\editvlayout.png" />
+    <None Include="..\formeditor\images\mac\editvlayoutsplit.png" />
+    <None Include="..\formeditor\images\win\editvlayoutsplit.png" />
+    <None Include="..\formeditor\images\emptyicon.png" />
+    <None Include="..\formeditor\images\filenew-16.png" />
+    <None Include="..\formeditor\images\mac\filenew.png" />
+    <None Include="..\formeditor\images\win\filenew.png" />
+    <None Include="..\formeditor\images\fileopen-16.png" />
+    <None Include="..\formeditor\images\mac\fileopen.png" />
+    <None Include="..\formeditor\images\win\fileopen.png" />
+    <None Include="..\formeditor\images\mac\filesave.png" />
+    <None Include="..\formeditor\images\win\filesave.png" />
+    <QtRcc Include="..\..\..\..\shared\findwidget\findwidget.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">findwidget</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">findwidget</InitFuncName>
+    </QtRcc>
+    <None Include="..\formeditor\images\widgets\fontcombobox.png" />
+    <None Include="..\propertyeditor\fontmapping.xml" />
+    <QtRcc Include="..\formeditor\formeditor.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">formeditor</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">formeditor</InitFuncName>
+    </QtRcc>
+    <None Include="..\formeditor\images\mac\forward.png" />
+    <None Include="..\formeditor\images\win\forward.png" />
+    <None Include="..\formeditor\images\widgets\frame.png" />
+    <None Include="..\formeditor\images\widgets\graphicsview.png" />
+    <None Include="..\formeditor\images\widgets\groupbox.png" />
+    <None Include="..\formeditor\images\cursors\hand.png" />
+    <None Include="..\formeditor\images\widgets\hscrollbar.png" />
+    <None Include="..\formeditor\images\widgets\hslider.png" />
+    <None Include="..\formeditor\images\cursors\hsplit.png" />
+    <None Include="..\formeditor\images\widgets\hsplit.png" />
+    <None Include="..\formeditor\images\cursors\ibeam.png" />
+    <None Include="..\formeditor\images\mac\insertimage.png" />
+    <None Include="..\formeditor\images\win\insertimage.png" />
+    <None Include="..\formeditor\images\widgets\label.png" />
+    <None Include="..\formeditor\images\widgets\lcdnumber.png" />
+    <None Include="..\formeditor\images\leveldown.png" />
+    <None Include="..\formeditor\images\levelup.png" />
+    <None Include="..\formeditor\images\widgets\line.png" />
+    <None Include="..\formeditor\images\widgets\lineedit.png" />
+    <None Include="..\formeditor\images\widgets\listbox.png" />
+    <None Include="..\formeditor\images\widgets\listview.png" />
+    <None Include="..\formeditor\images\widgets\mdiarea.png" />
+    <None Include="..\formeditor\images\minus-16.png" />
+    <None Include="..\formeditor\images\mac\minus.png" />
+    <None Include="..\formeditor\images\win\minus.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\mac\next.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\win\next.png" />
+    <None Include="..\formeditor\images\cursors\no.png" />
+    <None Include="..\formeditor\images\cursors\openhand.png" />
+    <None Include="..\formeditor\images\widgets\plaintextedit.png" />
+    <None Include="..\formeditor\images\plus-16.png" />
+    <None Include="..\formeditor\images\mac\plus.png" />
+    <None Include="..\formeditor\images\win\plus.png" />
+    <None Include="..\formeditor\images\prefix-add.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\mac\previous.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\win\previous.png" />
+    <None Include="..\formeditor\images\widgets\progress.png" />
+    <QtRcc Include="..\propertyeditor\propertyeditor.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">propertyeditor</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">propertyeditor</InitFuncName>
+    </QtRcc>
+    <None Include="..\formeditor\images\widgets\pushbutton.png" />
+    <None Include="..\formeditor\images\qt3logo.png" />
+    <None Include="..\formeditor\images\qtlogo16x16.png" />
+    <None Include="..\formeditor\images\qtlogo24x24.png" />
+    <None Include="..\formeditor\images\qtlogo32x32.png" />
+    <None Include="..\formeditor\images\qtlogo64x64.png" />
+    <QtRcc Include="..\..\..\..\shared\qtpropertybrowser\qtpropertybrowser.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qtpropertybrowser</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qtpropertybrowser</InitFuncName>
+    </QtRcc>
+    <None Include="..\formeditor\images\widgets\radiobutton.png" />
+    <None Include="..\formeditor\images\mac\redo.png" />
+    <None Include="..\formeditor\images\win\redo.png" />
+    <None Include="..\formeditor\images\reload.png" />
+    <None Include="..\formeditor\images\resetproperty.png" />
+    <None Include="..\formeditor\images\mac\resourceeditortool.png" />
+    <None Include="..\formeditor\images\win\resourceeditortool.png" />
+    <None Include="..\formeditor\images\righttoleft.png" />
+    <None Include="..\formeditor\images\widgets\scrollarea.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\mac\searchfind.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\win\searchfind.png" />
+    <None Include="..\formeditor\images\mac\signalslottool.png" />
+    <None Include="..\formeditor\images\win\signalslottool.png" />
+    <None Include="..\formeditor\images\mac\simplifyrichtext.png" />
+    <None Include="..\formeditor\images\win\simplifyrichtext.png" />
+    <None Include="..\formeditor\images\cursors\sizeall.png" />
+    <None Include="..\formeditor\images\cursors\sizeb.png" />
+    <None Include="..\formeditor\images\cursors\sizef.png" />
+    <None Include="..\formeditor\images\cursors\sizeh.png" />
+    <None Include="..\formeditor\images\cursors\sizev.png" />
+    <None Include="..\formeditor\images\sort.png" />
+    <None Include="..\formeditor\images\widgets\spacer.png" />
+    <None Include="..\formeditor\images\widgets\spinbox.png" />
+    <None Include="..\formeditor\images\submenu.png" />
+    <None Include="..\formeditor\images\widgets\table.png" />
+    <None Include="..\formeditor\images\mac\tabordertool.png" />
+    <None Include="..\formeditor\images\win\tabordertool.png" />
+    <None Include="..\formeditor\images\widgets\tabwidget.png" />
+    <None Include="..\formeditor\images\mac\textanchor.png" />
+    <None Include="..\formeditor\images\win\textanchor.png" />
+    <None Include="..\formeditor\images\mac\textbold.png" />
+    <None Include="..\formeditor\images\win\textbold.png" />
+    <None Include="..\formeditor\images\mac\textcenter.png" />
+    <None Include="..\formeditor\images\win\textcenter.png" />
+    <None Include="..\formeditor\images\widgets\textedit.png" />
+    <None Include="..\formeditor\images\mac\textitalic.png" />
+    <None Include="..\formeditor\images\win\textitalic.png" />
+    <None Include="..\formeditor\images\mac\textjustify.png" />
+    <None Include="..\formeditor\images\win\textjustify.png" />
+    <None Include="..\formeditor\images\mac\textleft.png" />
+    <None Include="..\formeditor\images\win\textleft.png" />
+    <None Include="..\formeditor\images\mac\textright.png" />
+    <None Include="..\formeditor\images\win\textright.png" />
+    <None Include="..\formeditor\images\mac\textsubscript.png" />
+    <None Include="..\formeditor\images\win\textsubscript.png" />
+    <None Include="..\formeditor\images\mac\textsuperscript.png" />
+    <None Include="..\formeditor\images\win\textsuperscript.png" />
+    <None Include="..\formeditor\images\mac\textunder.png" />
+    <None Include="..\formeditor\images\win\textunder.png" />
+    <None Include="..\formeditor\images\widgets\timeedit.png" />
+    <None Include="..\formeditor\images\widgets\toolbox.png" />
+    <None Include="..\formeditor\images\widgets\toolbutton.png" />
+    <None Include="..\formeditor\images\mac\undo.png" />
+    <None Include="..\formeditor\images\win\undo.png" />
+    <None Include="..\formeditor\images\mac\up.png" />
+    <None Include="..\formeditor\images\win\up.png" />
+    <None Include="..\formeditor\images\cursors\uparrow.png" />
+    <None Include="..\formeditor\images\widgets\vline.png" />
+    <None Include="..\formeditor\images\widgets\vscrollbar.png" />
+    <None Include="..\formeditor\images\widgets\vslider.png" />
+    <None Include="..\formeditor\images\widgets\vspacer.png" />
+    <None Include="..\formeditor\images\cursors\vsplit.png" />
+    <None Include="..\formeditor\images\cursors\wait.png" />
+    <None Include="..\formeditor\images\cursors\whatsthis.png" />
+    <None Include="..\formeditor\images\widgets\widget.png" />
+    <QtRcc Include="..\widgetbox\widgetbox.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">widgetbox</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">widgetbox</InitFuncName>
+    </QtRcc>
+    <None Include="..\widgetbox\widgetbox.xml" />
+    <None Include="..\formeditor\images\widgets\widgetstack.png" />
+    <None Include="..\formeditor\images\mac\widgettool.png" />
+    <None Include="..\formeditor\images\win\widgettool.png" />
+    <None Include="..\formeditor\images\widgets\wizard.png" />
+    <None Include="..\..\..\..\shared\findwidget\images\wrap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\Qt5DesignerComponents_resource.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <ResourceCompile Include=".\Qt5DesignerComponentsd_resource.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
